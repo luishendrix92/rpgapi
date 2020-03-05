@@ -37,7 +37,7 @@ public class ActionController {
     return modelMapper.map(actionService.getActions(), actionList);
   }
 
-  @PutMapping(value = "/attack")
+  @PostMapping(value = "/attack")
   public CharacterResponse attack(
     @RequestParam(required = true) long attackerId,
     @RequestParam(required = true) long victimId
