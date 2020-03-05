@@ -58,7 +58,7 @@ public class CharacterController {
     return modelMapper.map(character, CharacterResponse.class);
   }
 
-  @DeleteMapping(value = "/{characterId}")
+  @PostMapping(value = "/{characterId}")
   public void remove(@PathVariable long characterId) {
     characterService.removeCharacter(characterId);
   }
